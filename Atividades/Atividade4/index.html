@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Notícias</title>
+    <style>
+        /*  CSS */
+        body {
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 10;
+        }
+        header {
+            background-color: #f01c2d;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #090a0e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 10;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin-right: 80px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .destaque {
+            background-image: url(ImagensPWEB/ImagemAltaBaffs.jpg) ;
+            background-color: #f0f0f0;
+            width: 80%;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 1;
+        }
+        .noticias-principais {
+           
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+        .noticia {
+            background-size: cover;
+            background-color: #f9f9f9;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .noticias-secundarias {
+            font-weight: bold;
+            background-size: contain;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .noticia-secundaria {
+            font-weight: bold;
+            background-size: contain;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FATEC News</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">PROFESSORES</a></li>
+            <li><a href="#">ALUNOS</a></li>
+            <li><a href="#">BAFFS</a></li>
+            <li><a href="#">CURSOS</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="destaque">
+            <h2>Bitcoin dispara, mas não consegue se aproximar da alta do salgado do baffs</h2>
+            <p>Salgado teve um aumento de 30098 % em relação ao mesmo período do ano passado.</p>
+        </div>
+    
+        <div class="noticias-principais">
+            <div class="noticia" style="background-image: url(ImagensPWEB/Pacoca.jpg);"> 
+                <h3>Furtos</h3>
+                <p>Munari é visto roubando paçoquinha</p>
+            </div>
+            <div class="noticia" style= "background-image:url(ImagensPWEB/TilapiaVerdadeira.jpg);">
+                <h3>Diversão</h3>
+                <p>Está liberada a pesca de tilapias, no lago da FATEC</p>
+            </div>
+            <div class="noticia" style="background-image:url(ImagensPWEB/domingoferiado.jpg);">
+                <h3>Notícias Ruins</h3>
+                <p>Muitos Feriados de quarta e domingo</p>
+            </div>
+        </div>
+        
+        <div class="noticias-secundarias">
+            <div class="noticia-secundaria" style="background-image: url(ImagensPWEB/papelrasgado.jpg);">
+                <h3>É O FIM</h3>
+                <p>Alunos decretam o fim das provas de programação em folha de papel. </p>
+            </div>
+            <div class="noticia-secundaria" style="background-image: url(ImagensPWEB/planejamento.jpg);">
+                <h3>Semana de prova ?</h3>
+                <p>Apesar de não assumirem publicamente, cada vez parece mais que os professores combinam a semana de provas.</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

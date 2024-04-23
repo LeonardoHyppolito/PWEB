@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5 </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;    /* */ 
+            font-family: Arial,  sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            text-align: center;
+            border: 5px solid black;
+        }
+
+        .container h2 {
+            margin-top: 200px;
+        }
+        /* Basicamente, o @media, significa "Se alguma estrutura de midia for de tal jeito, funcionaremos assim: */ 
+        /* O screen por sua vez, apenas explicita que tudo será visualizado em uma tela, e não em uma impressora por exemplo*/
+        /* Definindo as cores de fundo e o texto do h2 para diferentes tamanhos de tela usando media queries */
+        @media screen and (max-width: 420px) {
+            .container {
+                background-color: rgb(8, 58, 122);
+            }
+
+            .container h2::before {
+                content: "Azul - ";
+            }
+        }
+
+        @media screen and (min-width: 421px) and (max-width: 768px) {
+            .container {
+                background-color: orange;
+            }
+
+            .container h2::before {
+                content: "Laranja - ";
+            }
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                background-color: rgb(255, 2, 192);
+            }
+
+            .container h2::before {
+                content: "Rosa - ";
+            }
+        }
+
+        @media screen and (min-width: 1025px) and (max-width: 1280){
+            .container {
+                background-color: rgb(252, 132, 132);
+            }
+
+            .container h2::before {
+                content: "Vermelho - ";
+            }
+        }
+
+        @media screen and (min-width: 1281px) and (max-width: 1566){
+            .container {
+                background-color: rgb(144, 75, 255);
+            }
+
+            .container h2::before {
+                content: "roxo - ";
+            }
+        }
+
+        @media screen and (min-width: 1567px) and (max-width: 1767){
+            .container {
+                background-color: rgb(255, 251, 14);
+            }
+
+            .container h2::before {
+                content: "Amarelo - ";
+            }
+        }
+
+        @media screen and (min-width: 1767px) {
+            .container {
+                background-color: rgb(36, 252, 28);
+            }
+
+            .container h2::before {
+                content: "Verde - ";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2></h2>
+    </div>
+</body>
+</html>

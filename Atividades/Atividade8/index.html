@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesquisa de Opinião</title>
+</head>
+<body>
+<h1>Pesquisa de Opinião sobre o Filme</h1>
+<form id="surveyForm">
+  <label for="age">Idade:</label>
+  <input type="number" id="age" required><br><br>
+
+  <label for="gender">Sexo:</label>
+  <select id="gender" required>
+    <option value="male">Masculino</option>
+    <option value="female">Feminino</option>
+  </select><br><br>
+
+  <label for="opinion">Opinião:</label>
+  <select id="opinion" required>
+    <option value="4">Ótimo</option>
+    <option value="3">Bom</option>
+    <option value="2">Regular</option>
+    <option value="1">Péssimo</option>
+  </select><br><br>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<div id="results">
+  <h2>Resultados da Pesquisa:</h2>
+  <p>Média de Idade: <span id="averageAge"></span></p>
+  <p>Idade da Pessoa Mais Velha: <span id="oldestAge"></span></p>
+  <p>Idade da Pessoa Mais Nova: <span id="youngestAge"></span></p>
+  <p>Quantidade de Pessoas que Responderam Péssimo: <span id="poorOpinions"></span></p>
+  <p>Porcentagem de Pessoas que Responderam Ótimo e Bom: <span id="goodOpinionsPercentage"></span>%</p>
+  <p>Número de Mulheres que Responderam: <span id="femaleCount"></span></p>
+  <p>Número de Homens que Responderam: <span id="maleCount"></span></p>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

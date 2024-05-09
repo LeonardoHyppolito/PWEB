@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformação de Texto</title>
+</head>
+<body>
+<form>
+    <label for="texto">Digite o texto:</label>
+    <input type="text" id="texto" name="texto"><br><br>
+    
+    <input type="checkbox" id="maiusculas" name="maiusculas">
+    <label for="maiusculas">Transformar em Maiúsculas</label><br>
+    
+    <input type="checkbox" id="minusculas" name="minusculas">
+    <label for="minusculas">Transformar em Minúsculas</label><br><br>
+    
+    <button type="button" onclick="transformarTexto()">Transformar Texto</button>
+</form>
+
+<script>
+function transformarTexto() {
+    var texto = document.getElementById("texto").value;
+    var maiusculasCheckbox = document.getElementById("maiusculas");
+    var minusculasCheckbox = document.getElementById("minusculas");
+    
+    if (maiusculasCheckbox.checked) {
+        texto = texto.toUpperCase();
+    } else if (minusculasCheckbox.checked) {
+        texto = texto.toLowerCase();
+    }
+    
+    alert("Texto transformado: " + texto);
+}
+</script>
+</body>
+</html>

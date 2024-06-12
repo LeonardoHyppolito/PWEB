@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas de Estudos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tarefas de Estudos</h1>
+        <button class="button-home" onclick="location.href='index.html'">
+            <img src="./Imagens/home-icon-flat-by-Vexels.png" alt="Home">
+        </button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Data de Vencimento</th>
+                    <th>Prioridade</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <div class="new-task">
+            <h2>Adicionar Nova Tarefa</h2>
+            <input type="text" id="titulo" placeholder="Título">
+            <input type="text" id="descricao" placeholder="Descrição">
+            <input type="date" id="data-vencimento">
+            <select id="prioridade">
+                <option value="Alta">Alta</option>
+                <option value="Média">Média</option>
+                <option value="Baixa">Baixa</option>
+            </select>
+            <select id="status">
+                <option value="Pendente">Pendente</option>
+                <option value="Feito">Feito</option>
+            </select>
+            <button id="add-task-button">Adicionar Tarefa</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoria = 'estudos';
+            const tbody = document.querySelector(`#tarefas-${categoria} tbody`);
+
+           
+
+            document.getElementById('add-task-button').addEventListener('click', function() {
+                const titulo = document.getElementById('titulo').value.trim();
+                const descricao = document.getElementById('descricao').value.trim();
+                const dataVencimento = document.getElementById('data-vencimento').value;
+                const prioridade = document.getElementById('prioridade').value;
+                const status = document.getElementById('status').value;
+
+                if (titulo && descricao && dataVencimento) {
+                    addTask(tbody, titulo, descricao, dataVencimento, prioridade, status);
+                    clearInputs();
+                }
+            });
+
+            function addTask(tbody, titulo, descricao, dataVencimento, prioridade, status) {
+                const tr = document.createElement('tr');
+
+                tr.innerHTML = `
+                    <td>${titulo}</td>
+                    <td>${descricao}</td>
+                    <td>${dataVencimento}</td>
+                    <td>${prioridade}</td>
+                    <td>${status}</td>
+                    <td><button class="remove-task-button">Remover</button></td>
+                `;
+
+                tbody.appendChild(tr);
+
+                tr.querySelector('.remove-task-button').addEventListener('click', function() {
+                    tr.remove();
+                });
+            }
+
+            function clearInputs() {
+                document.getElementById('titulo').value = '';
+                document.getElementById('descricao').value = '';
+                document.getElementById('data-vencimento').value = '';
+                document.getElementById('prioridade').value = 'Alta';
+                document.getElementById('status').value = 'Pendente';
+            }
+        });
+    </script>
+</body>
+</html>
